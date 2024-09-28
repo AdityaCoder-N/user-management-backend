@@ -4,7 +4,7 @@
       "id": "1",
       "name": "John Doe",
       "email": "john.doe@example.com",
-      "role": "user",
+      "role": "admin",
       "createdAt": "2024-09-20T14:30:00Z",
       "updatedAt": "2024-09-20T14:30:00Z"
     },
@@ -101,6 +101,14 @@
       "role": "user",
       "createdAt": 1727517972252,
       "updatedAt": 1727517972252
+    },
+    {
+      "id": "a759eef1-767a-47a8-b497-3f28adc5bd9c",
+      "name": "new user 3",
+      "email": "usernew@gmail.com",
+      "role": "user",
+      "createdAt": 1727523635184,
+      "updatedAt": 1727523635184
     }
   ]
 }

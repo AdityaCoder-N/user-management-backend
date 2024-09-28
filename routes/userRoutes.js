@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
 // **Get user by ID**
 router.get('/:id', (req, res) => {
     const data = readDB();
-    const user = data.users.find((u) => u.id === parseInt(req.params.id));
+    const user = data.users.find((u) => u.id == (req.params.id));
     if (!user) {
         return res.status(404).json({ message: 'User not found' });
     }
@@ -46,7 +46,10 @@ router.post('/', (req, res) => {
 // **Update user by ID**
 router.put('/:id', (req, res) => {
     const data = readDB();
-    const userIndex = data.users.findIndex((u) => u.id === parseInt(req.params.id));
+    
+    console.log(req.params.id);
+    const userIndex = data.users.findIndex((u) => u.id == (req.params.id));
+    console.log("User found : ",userIndex)
     if (userIndex === -1) {
         return res.status(404).json({ message: 'User not found' });
     }
@@ -58,7 +61,7 @@ router.put('/:id', (req, res) => {
 // **Delete user by ID**
 router.delete('/:id', (req, res) => {
     const data = readDB();
-    const userIndex = data.users.findIndex((u) => u.id === parseInt(req.params.id));
+    const userIndex = data.users.findIndex((u) => u.id == (req.params.id));
     if (userIndex === -1) {
         return res.status(404).json({ message: 'User not found' });
     }
